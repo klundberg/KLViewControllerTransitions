@@ -38,6 +38,16 @@
                ReferencedContainer = "container:KLModalTransitions.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "79A5A8F017F464B400696B55"
+               BuildableName = "KLModalTransitionsDemoTests.xctest"
+               BlueprintName = "KLModalTransitionsDemoTests"
+               ReferencedContainer = "container:KLModalTransitions.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

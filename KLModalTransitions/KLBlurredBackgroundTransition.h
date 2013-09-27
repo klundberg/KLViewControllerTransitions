@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface KLModalTransitions : NSObject
+@interface KLBlurredBackgroundTransition : NSObject <UIViewControllerAnimatedTransitioning>
 
 @end
