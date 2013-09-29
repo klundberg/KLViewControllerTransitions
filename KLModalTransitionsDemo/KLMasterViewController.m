@@ -9,8 +9,10 @@
 #import "KLMasterViewController.h"
 
 #import "KLDetailViewController.h"
+#import "KLBlurredBackgroundPresentTransition.h"
 
-@interface KLMasterViewController () {
+@interface KLMasterViewController () <UIViewControllerTransitioningDelegate>
+{
     NSMutableArray *_objects;
 }
 @end
@@ -66,6 +68,7 @@
 
     NSDate *object = _objects[indexPath.row];
     cell.textLabel.text = [object description];
+    cell.backgroundColor = ([_objects count] % 2 == 0 ? [UIColor redColor] : [UIColor yellowColor]);
     return cell;
 }
 
@@ -85,29 +88,27 @@
     }
 }
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSDate *object = _objects[indexPath.row];
+
         [[segue destinationViewController] setDetailItem:object];
+
+        [segue.destinationViewController setModalPresentationStyle:UIModalPresentationCustom];
+        [segue.destinationViewController setTransitioningDelegate:self];
     }
+}
+
+- (id<UIViewControllerAnimatedTransitioning>) animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    return [[KLBlurredBackgroundPresentTransition alloc] init];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [[KLBlurredBackgroundPresentTransition alloc] initWithDirection:KLTransitionDirectionReverse];
 }
 
 @end
