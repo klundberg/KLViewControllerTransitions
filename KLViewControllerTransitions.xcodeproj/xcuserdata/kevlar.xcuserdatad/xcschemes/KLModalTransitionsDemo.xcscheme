@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79A5A8A317F4647E00696B55"
-               BuildableName = "libKLModalTransitions.a"
-               BlueprintName = "KLModalTransitions"
-               ReferencedContainer = "container:KLModalTransitions.xcodeproj">
+               BlueprintIdentifier = "79A5A8D017F464B300696B55"
+               BuildableName = "KLViewControllerTransitionsDemo.app"
+               BlueprintName = "KLViewControllerTransitionsDemo"
+               ReferencedContainer = "container:KLViewControllerTransitions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,27 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79A5A8B317F4647E00696B55"
-               BuildableName = "KLModalTransitionsTests.xctest"
-               BlueprintName = "KLModalTransitionsTests"
-               ReferencedContainer = "container:KLModalTransitions.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79A5A8F017F464B400696B55"
-               BuildableName = "KLModalTransitionsDemoTests.xctest"
-               BlueprintName = "KLModalTransitionsDemoTests"
-               ReferencedContainer = "container:KLModalTransitions.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "79A5A8D017F464B300696B55"
+            BuildableName = "KLViewControllerTransitionsDemo.app"
+            BlueprintName = "KLViewControllerTransitionsDemo"
+            ReferencedContainer = "container:KLViewControllerTransitions.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -59,6 +48,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "79A5A8D017F464B300696B55"
+            BuildableName = "KLViewControllerTransitionsDemo.app"
+            BlueprintName = "KLViewControllerTransitionsDemo"
+            ReferencedContainer = "container:KLViewControllerTransitions.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -68,6 +66,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "79A5A8D017F464B300696B55"
+            BuildableName = "KLViewControllerTransitionsDemo.app"
+            BlueprintName = "KLViewControllerTransitionsDemo"
+            ReferencedContainer = "container:KLViewControllerTransitions.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

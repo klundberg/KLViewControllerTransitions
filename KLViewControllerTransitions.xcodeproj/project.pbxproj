@@ -13,7 +13,7 @@
 		79A5A8B617F4647E00696B55 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8B517F4647E00696B55 /* XCTest.framework */; };
 		79A5A8B717F4647E00696B55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A717F4647E00696B55 /* Foundation.framework */; };
 		79A5A8B917F4647E00696B55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8B817F4647E00696B55 /* UIKit.framework */; };
-		79A5A8BC17F4647E00696B55 /* libKLModalTransitions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A417F4647E00696B55 /* libKLModalTransitions.a */; };
+		79A5A8BC17F4647E00696B55 /* libKLViewControllerTransitions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */; };
 		79A5A8C217F4647E00696B55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79A5A8C017F4647E00696B55 /* InfoPlist.strings */; };
 		79A5A8C417F4647E00696B55 /* KLModalTransitionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8C317F4647E00696B55 /* KLModalTransitionsTests.m */; };
 		79A5A8D217F464B400696B55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A717F4647E00696B55 /* Foundation.framework */; };
@@ -28,7 +28,7 @@
 		79A5A8EC17F464B400696B55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A5A8EB17F464B400696B55 /* Images.xcassets */; };
 		79A5A90717F512AF00696B55 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A90617F512AF00696B55 /* UIImage+ImageEffects.m */; };
 		79F6112C17F5B45C00DDA76B /* UIView+UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F6112B17F5B45C00DDA76B /* UIView+UIImageEffects.m */; };
-		79F6113217F5BB2E00DDA76B /* libKLModalTransitions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A417F4647E00696B55 /* libKLModalTransitions.a */; };
+		79F6113217F5BB2E00DDA76B /* libKLViewControllerTransitions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,23 +62,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		79A5A8A417F4647E00696B55 /* libKLModalTransitions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKLModalTransitions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKLViewControllerTransitions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5A8A717F4647E00696B55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		79A5A8AB17F4647E00696B55 /* KLModalTransitions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLModalTransitions-Prefix.pch"; sourceTree = "<group>"; };
+		79A5A8AB17F4647E00696B55 /* KLViewControllerTransitions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLViewControllerTransitions-Prefix.pch"; sourceTree = "<group>"; };
 		79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLBlurredBackgroundCoverTransition.h; sourceTree = "<group>"; };
 		79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLBlurredBackgroundCoverTransition.m; sourceTree = "<group>"; };
-		79A5A8B417F4647E00696B55 /* KLModalTransitionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KLModalTransitionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79A5A8B417F4647E00696B55 /* KLViewControllerTransitionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KLViewControllerTransitionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5A8B517F4647E00696B55 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		79A5A8B817F4647E00696B55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		79A5A8BF17F4647E00696B55 /* KLModalTransitionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KLModalTransitionsTests-Info.plist"; sourceTree = "<group>"; };
+		79A5A8BF17F4647E00696B55 /* KLViewControllerTransitionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KLViewControllerTransitionsTests-Info.plist"; sourceTree = "<group>"; };
 		79A5A8C117F4647E00696B55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		79A5A8C317F4647E00696B55 /* KLModalTransitionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLModalTransitionsTests.m; sourceTree = "<group>"; };
-		79A5A8D117F464B300696B55 /* KLModalTransitionsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLModalTransitionsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79A5A8D117F464B300696B55 /* KLViewControllerTransitionsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLViewControllerTransitionsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5A8D317F464B400696B55 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		79A5A8D817F464B400696B55 /* KLModalTransitionsDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KLModalTransitionsDemo-Info.plist"; sourceTree = "<group>"; };
+		79A5A8D817F464B400696B55 /* KLViewControllerTransitionsDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KLViewControllerTransitionsDemo-Info.plist"; sourceTree = "<group>"; };
 		79A5A8DA17F464B400696B55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		79A5A8DC17F464B400696B55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		79A5A8DE17F464B400696B55 /* KLModalTransitionsDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLModalTransitionsDemo-Prefix.pch"; sourceTree = "<group>"; };
+		79A5A8DE17F464B400696B55 /* KLViewControllerTransitionsDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLViewControllerTransitionsDemo-Prefix.pch"; sourceTree = "<group>"; };
 		79A5A8DF17F464B400696B55 /* KLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLAppDelegate.h; sourceTree = "<group>"; };
 		79A5A8E017F464B400696B55 /* KLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLAppDelegate.m; sourceTree = "<group>"; };
 		79A5A8E317F464B400696B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				79A5A8B617F4647E00696B55 /* XCTest.framework in Frameworks */,
 				79A5A8B917F4647E00696B55 /* UIKit.framework in Frameworks */,
 				79A5A8B717F4647E00696B55 /* Foundation.framework in Frameworks */,
-				79A5A8BC17F4647E00696B55 /* libKLModalTransitions.a in Frameworks */,
+				79A5A8BC17F4647E00696B55 /* libKLViewControllerTransitions.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79F6113217F5BB2E00DDA76B /* libKLModalTransitions.a in Frameworks */,
+				79F6113217F5BB2E00DDA76B /* libKLViewControllerTransitions.a in Frameworks */,
 				79A5A8D417F464B400696B55 /* CoreGraphics.framework in Frameworks */,
 				79A5A8D517F464B400696B55 /* UIKit.framework in Frameworks */,
 				79A5A8D217F464B400696B55 /* Foundation.framework in Frameworks */,
@@ -130,7 +130,7 @@
 		79A5A89B17F4647E00696B55 = {
 			isa = PBXGroup;
 			children = (
-				79A5A8A917F4647E00696B55 /* KLModalTransitions */,
+				79A5A8A917F4647E00696B55 /* KLViewControllerTransitions */,
 				79A5A8BD17F4647E00696B55 /* KLModalTransitionsTests */,
 				79A5A8D617F464B400696B55 /* KLModalTransitionsDemo */,
 				79A5A8A617F4647E00696B55 /* Frameworks */,
@@ -141,9 +141,9 @@
 		79A5A8A517F4647E00696B55 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				79A5A8A417F4647E00696B55 /* libKLModalTransitions.a */,
-				79A5A8B417F4647E00696B55 /* KLModalTransitionsTests.xctest */,
-				79A5A8D117F464B300696B55 /* KLModalTransitionsDemo.app */,
+				79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */,
+				79A5A8B417F4647E00696B55 /* KLViewControllerTransitionsTests.xctest */,
+				79A5A8D117F464B300696B55 /* KLViewControllerTransitionsDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		79A5A8A917F4647E00696B55 /* KLModalTransitions */ = {
+		79A5A8A917F4647E00696B55 /* KLViewControllerTransitions */ = {
 			isa = PBXGroup;
 			children = (
 				79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */,
@@ -170,13 +170,13 @@
 				79F6112A17F5B45C00DDA76B /* UIView+UIImageEffects.h */,
 				79F6112B17F5B45C00DDA76B /* UIView+UIImageEffects.m */,
 			);
-			path = KLModalTransitions;
+			path = KLViewControllerTransitions;
 			sourceTree = "<group>";
 		};
 		79A5A8AA17F4647E00696B55 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				79A5A8AB17F4647E00696B55 /* KLModalTransitions-Prefix.pch */,
+				79A5A8AB17F4647E00696B55 /* KLViewControllerTransitions-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -187,13 +187,14 @@
 				79A5A8C317F4647E00696B55 /* KLModalTransitionsTests.m */,
 				79A5A8BE17F4647E00696B55 /* Supporting Files */,
 			);
-			path = KLModalTransitionsTests;
+			name = KLModalTransitionsTests;
+			path = KLViewControllerTransitionsTests;
 			sourceTree = "<group>";
 		};
 		79A5A8BE17F4647E00696B55 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				79A5A8BF17F4647E00696B55 /* KLModalTransitionsTests-Info.plist */,
+				79A5A8BF17F4647E00696B55 /* KLViewControllerTransitionsTests-Info.plist */,
 				79A5A8C017F4647E00696B55 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -212,16 +213,17 @@
 				79A5A8EB17F464B400696B55 /* Images.xcassets */,
 				79A5A8D717F464B400696B55 /* Supporting Files */,
 			);
-			path = KLModalTransitionsDemo;
+			name = KLModalTransitionsDemo;
+			path = KLViewControllerTransitionsDemo;
 			sourceTree = "<group>";
 		};
 		79A5A8D717F464B400696B55 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				79A5A8D817F464B400696B55 /* KLModalTransitionsDemo-Info.plist */,
+				79A5A8D817F464B400696B55 /* KLViewControllerTransitionsDemo-Info.plist */,
 				79A5A8D917F464B400696B55 /* InfoPlist.strings */,
 				79A5A8DC17F464B400696B55 /* main.m */,
-				79A5A8DE17F464B400696B55 /* KLModalTransitionsDemo-Prefix.pch */,
+				79A5A8DE17F464B400696B55 /* KLViewControllerTransitionsDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -229,9 +231,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		79A5A8A317F4647E00696B55 /* KLModalTransitions */ = {
+		79A5A8A317F4647E00696B55 /* KLViewControllerTransitions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79A5A8C717F4647E00696B55 /* Build configuration list for PBXNativeTarget "KLModalTransitions" */;
+			buildConfigurationList = 79A5A8C717F4647E00696B55 /* Build configuration list for PBXNativeTarget "KLViewControllerTransitions" */;
 			buildPhases = (
 				79A5A8A017F4647E00696B55 /* Sources */,
 				79A5A8A117F4647E00696B55 /* Frameworks */,
@@ -241,14 +243,14 @@
 			);
 			dependencies = (
 			);
-			name = KLModalTransitions;
+			name = KLViewControllerTransitions;
 			productName = KLModalTransitions;
-			productReference = 79A5A8A417F4647E00696B55 /* libKLModalTransitions.a */;
+			productReference = 79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		79A5A8B317F4647E00696B55 /* KLModalTransitionsTests */ = {
+		79A5A8B317F4647E00696B55 /* KLViewControllerTransitionsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79A5A8CA17F4647E00696B55 /* Build configuration list for PBXNativeTarget "KLModalTransitionsTests" */;
+			buildConfigurationList = 79A5A8CA17F4647E00696B55 /* Build configuration list for PBXNativeTarget "KLViewControllerTransitionsTests" */;
 			buildPhases = (
 				79A5A8B017F4647E00696B55 /* Sources */,
 				79A5A8B117F4647E00696B55 /* Frameworks */,
@@ -259,14 +261,14 @@
 			dependencies = (
 				79A5A8BB17F4647E00696B55 /* PBXTargetDependency */,
 			);
-			name = KLModalTransitionsTests;
+			name = KLViewControllerTransitionsTests;
 			productName = KLModalTransitionsTests;
-			productReference = 79A5A8B417F4647E00696B55 /* KLModalTransitionsTests.xctest */;
+			productReference = 79A5A8B417F4647E00696B55 /* KLViewControllerTransitionsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		79A5A8D017F464B300696B55 /* KLModalTransitionsDemo */ = {
+		79A5A8D017F464B300696B55 /* KLViewControllerTransitionsDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79A5A8FF17F464B400696B55 /* Build configuration list for PBXNativeTarget "KLModalTransitionsDemo" */;
+			buildConfigurationList = 79A5A8FF17F464B400696B55 /* Build configuration list for PBXNativeTarget "KLViewControllerTransitionsDemo" */;
 			buildPhases = (
 				79A5A8CD17F464B300696B55 /* Sources */,
 				79A5A8CE17F464B300696B55 /* Frameworks */,
@@ -277,9 +279,9 @@
 			dependencies = (
 				79F6113117F5BB2700DDA76B /* PBXTargetDependency */,
 			);
-			name = KLModalTransitionsDemo;
+			name = KLViewControllerTransitionsDemo;
 			productName = KLModalTransitionsDemo;
-			productReference = 79A5A8D117F464B300696B55 /* KLModalTransitionsDemo.app */;
+			productReference = 79A5A8D117F464B300696B55 /* KLViewControllerTransitionsDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -296,7 +298,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 79A5A89F17F4647E00696B55 /* Build configuration list for PBXProject "KLModalTransitions" */;
+			buildConfigurationList = 79A5A89F17F4647E00696B55 /* Build configuration list for PBXProject "KLViewControllerTransitions" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -309,9 +311,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				79A5A8A317F4647E00696B55 /* KLModalTransitions */,
-				79A5A8B317F4647E00696B55 /* KLModalTransitionsTests */,
-				79A5A8D017F464B300696B55 /* KLModalTransitionsDemo */,
+				79A5A8A317F4647E00696B55 /* KLViewControllerTransitions */,
+				79A5A8B317F4647E00696B55 /* KLViewControllerTransitionsTests */,
+				79A5A8D017F464B300696B55 /* KLViewControllerTransitionsDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -372,12 +374,12 @@
 /* Begin PBXTargetDependency section */
 		79A5A8BB17F4647E00696B55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 79A5A8A317F4647E00696B55 /* KLModalTransitions */;
+			target = 79A5A8A317F4647E00696B55 /* KLViewControllerTransitions */;
 			targetProxy = 79A5A8BA17F4647E00696B55 /* PBXContainerItemProxy */;
 		};
 		79F6113117F5BB2700DDA76B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 79A5A8A317F4647E00696B55 /* KLModalTransitions */;
+			target = 79A5A8A317F4647E00696B55 /* KLViewControllerTransitions */;
 			targetProxy = 79F6113017F5BB2700DDA76B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -483,11 +485,11 @@
 		79A5A8C817F4647E00696B55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/KLModalTransitions.dst;
+				DSTROOT = /tmp/KLViewControllerTransitions.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KLModalTransitions/KLModalTransitions-Prefix.pch";
+				GCC_PREFIX_HEADER = "KLViewControllerTransitions/KLViewControllerTransitions-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KLViewControllerTransitions;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -495,11 +497,11 @@
 		79A5A8C917F4647E00696B55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/KLModalTransitions.dst;
+				DSTROOT = /tmp/KLViewControllerTransitions.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KLModalTransitions/KLModalTransitions-Prefix.pch";
+				GCC_PREFIX_HEADER = "KLViewControllerTransitions/KLViewControllerTransitions-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KLViewControllerTransitions;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -507,20 +509,20 @@
 		79A5A8CB17F4647E00696B55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KLModalTransitionsDemo.app/KLModalTransitionsDemo";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KLViewControllerTransitionsDemo.app/KLViewControllerTransitionsDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KLModalTransitions/KLModalTransitions-Prefix.pch";
+				GCC_PREFIX_HEADER = "KLViewControllerTransitions/KLViewControllerTransitions-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "KLModalTransitionsTests/KLModalTransitionsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "KLViewControllerTransitionsTests/KLViewControllerTransitionsTests-Info.plist";
+				PRODUCT_NAME = KLViewControllerTransitionsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -529,16 +531,16 @@
 		79A5A8CC17F4647E00696B55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KLModalTransitionsDemo.app/KLModalTransitionsDemo";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KLViewControllerTransitionsDemo.app/KLViewControllerTransitionsDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KLModalTransitions/KLModalTransitions-Prefix.pch";
-				INFOPLIST_FILE = "KLModalTransitionsTests/KLModalTransitionsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "KLViewControllerTransitions/KLViewControllerTransitions-Prefix.pch";
+				INFOPLIST_FILE = "KLViewControllerTransitionsTests/KLViewControllerTransitionsTests-Info.plist";
+				PRODUCT_NAME = KLViewControllerTransitionsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -555,17 +557,17 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KLModalTransitionsDemo/KLModalTransitionsDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "KLViewControllerTransitionsDemo/KLViewControllerTransitionsDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "KLModalTransitionsDemo/KLModalTransitionsDemo-Info.plist";
+				INFOPLIST_FILE = "KLViewControllerTransitionsDemo/KLViewControllerTransitionsDemo-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KLViewControllerTransitionsDemo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -581,13 +583,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KLModalTransitionsDemo/KLModalTransitionsDemo-Prefix.pch";
-				INFOPLIST_FILE = "KLModalTransitionsDemo/KLModalTransitionsDemo-Info.plist";
+				GCC_PREFIX_HEADER = "KLViewControllerTransitionsDemo/KLViewControllerTransitionsDemo-Prefix.pch";
+				INFOPLIST_FILE = "KLViewControllerTransitionsDemo/KLViewControllerTransitionsDemo-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KLViewControllerTransitionsDemo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -595,7 +597,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		79A5A89F17F4647E00696B55 /* Build configuration list for PBXProject "KLModalTransitions" */ = {
+		79A5A89F17F4647E00696B55 /* Build configuration list for PBXProject "KLViewControllerTransitions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79A5A8C517F4647E00696B55 /* Debug */,
@@ -604,7 +606,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79A5A8C717F4647E00696B55 /* Build configuration list for PBXNativeTarget "KLModalTransitions" */ = {
+		79A5A8C717F4647E00696B55 /* Build configuration list for PBXNativeTarget "KLViewControllerTransitions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79A5A8C817F4647E00696B55 /* Debug */,
@@ -613,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79A5A8CA17F4647E00696B55 /* Build configuration list for PBXNativeTarget "KLModalTransitionsTests" */ = {
+		79A5A8CA17F4647E00696B55 /* Build configuration list for PBXNativeTarget "KLViewControllerTransitionsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79A5A8CB17F4647E00696B55 /* Debug */,
@@ -622,7 +624,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79A5A8FF17F464B400696B55 /* Build configuration list for PBXNativeTarget "KLModalTransitionsDemo" */ = {
+		79A5A8FF17F464B400696B55 /* Build configuration list for PBXNativeTarget "KLViewControllerTransitionsDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79A5A90017F464B400696B55 /* Debug */,

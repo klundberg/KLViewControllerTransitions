@@ -49,7 +49,7 @@ static NSInteger const BlurredViewTag = 19;
 
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0
-                        options:UIViewAnimationOptionCurveEaseOut
+                        options:[self animationOptions]
                      animations:^{
                          blurredImageView.frame = [self finalBlurredViewRect:transitionContext];
                          modalController.view.frame = [self finalModalControllerRect:transitionContext];
@@ -61,6 +61,15 @@ static NSInteger const BlurredViewTag = 19;
 
                          [transitionContext completeTransition:finished];
                      }];
+}
+
+- (UIViewAnimationOptions)animationOptions
+{
+    if (self.mode == KLTransitionModeForwards) {
+        return UIViewAnimationOptionCurveEaseOut;
+    } else {
+        return UIViewAnimationOptionCurveEaseIn;
+    }
 }
 
 #pragma mark - blurred view states
