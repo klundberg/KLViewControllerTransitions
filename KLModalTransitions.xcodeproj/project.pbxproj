@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		79A5A8A817F4647E00696B55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A717F4647E00696B55 /* Foundation.framework */; };
-		79A5A8AD17F4647E00696B55 /* KLBlurredBackgroundPresentTransition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundPresentTransition.h */; };
-		79A5A8AF17F4647E00696B55 /* KLBlurredBackgroundPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundPresentTransition.m */; };
+		79A5A8AD17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */; };
+		79A5A8AF17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m */; };
 		79A5A8B617F4647E00696B55 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8B517F4647E00696B55 /* XCTest.framework */; };
 		79A5A8B717F4647E00696B55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A717F4647E00696B55 /* Foundation.framework */; };
 		79A5A8B917F4647E00696B55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8B817F4647E00696B55 /* UIKit.framework */; };
@@ -55,7 +55,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				79A5A8AD17F4647E00696B55 /* KLBlurredBackgroundPresentTransition.h in CopyFiles */,
+				79A5A8AD17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +65,8 @@
 		79A5A8A417F4647E00696B55 /* libKLModalTransitions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKLModalTransitions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5A8A717F4647E00696B55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		79A5A8AB17F4647E00696B55 /* KLModalTransitions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLModalTransitions-Prefix.pch"; sourceTree = "<group>"; };
-		79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundPresentTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLBlurredBackgroundPresentTransition.h; sourceTree = "<group>"; };
-		79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundPresentTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLBlurredBackgroundPresentTransition.m; sourceTree = "<group>"; };
+		79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLBlurredBackgroundCoverTransition.h; sourceTree = "<group>"; };
+		79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLBlurredBackgroundCoverTransition.m; sourceTree = "<group>"; };
 		79A5A8B417F4647E00696B55 /* KLModalTransitionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KLModalTransitionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5A8B517F4647E00696B55 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		79A5A8B817F4647E00696B55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -162,8 +162,8 @@
 		79A5A8A917F4647E00696B55 /* KLModalTransitions */ = {
 			isa = PBXGroup;
 			children = (
-				79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundPresentTransition.h */,
-				79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundPresentTransition.m */,
+				79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */,
+				79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m */,
 				79A5A90517F512AF00696B55 /* UIImage+ImageEffects.h */,
 				79A5A90617F512AF00696B55 /* UIImage+ImageEffects.m */,
 				79A5A8AA17F4647E00696B55 /* Supporting Files */,
@@ -343,7 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79A5A90717F512AF00696B55 /* UIImage+ImageEffects.m in Sources */,
-				79A5A8AF17F4647E00696B55 /* KLBlurredBackgroundPresentTransition.m in Sources */,
+				79A5A8AF17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m in Sources */,
 				79F6112C17F5B45C00DDA76B /* UIView+UIImageEffects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

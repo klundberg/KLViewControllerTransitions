@@ -9,7 +9,7 @@
 #import "KLMasterViewController.h"
 
 #import "KLDetailViewController.h"
-#import "KLBlurredBackgroundPresentTransition.h"
+#import "KLBlurredBackgroundCoverTransition.h"
 
 @interface KLMasterViewController () <UIViewControllerTransitioningDelegate>
 {
@@ -103,12 +103,12 @@
 
 - (id<UIViewControllerAnimatedTransitioning>) animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
-    return [[KLBlurredBackgroundPresentTransition alloc] init];
+    return [[KLBlurredBackgroundCoverTransition alloc] init];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
-    return [[KLBlurredBackgroundPresentTransition alloc] initWithDirection:KLTransitionDirectionReverse];
+    return [[KLBlurredBackgroundCoverTransition alloc] initWithDirection:KLTransitionDirectionReverse];
 }
 
 @end
