@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7916EF4B17FB95680011C4AF /* KLModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7916EF4A17FB95680011C4AF /* KLModalViewController.m */; };
+		7916EF4C17FB98290011C4AF /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7916EF4117FB182E0011C4AF /* background.jpg */; };
+		7916EF4F17FB9AFA0011C4AF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7916EF4D17FB9AFA0011C4AF /* LICENSE */; };
+		7916EF5017FB9AFA0011C4AF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7916EF4E17FB9AFA0011C4AF /* README.md */; };
 		79A5A8A817F4647E00696B55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A717F4647E00696B55 /* Foundation.framework */; };
 		79A5A8AD17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */; };
 		79A5A8AF17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m */; };
@@ -24,7 +28,7 @@
 		79A5A8E117F464B400696B55 /* KLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8E017F464B400696B55 /* KLAppDelegate.m */; };
 		79A5A8E417F464B400696B55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A5A8E217F464B400696B55 /* Main.storyboard */; };
 		79A5A8E717F464B400696B55 /* KLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8E617F464B400696B55 /* KLMasterViewController.m */; };
-		79A5A8EA17F464B400696B55 /* KLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8E917F464B400696B55 /* KLDetailViewController.m */; };
+		79A5A8EA17F464B400696B55 /* KLBlurDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8E917F464B400696B55 /* KLBlurDetailController.m */; };
 		79A5A8EC17F464B400696B55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A5A8EB17F464B400696B55 /* Images.xcassets */; };
 		79A5A90717F512AF00696B55 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A90617F512AF00696B55 /* UIImage+ImageEffects.m */; };
 		79F6112C17F5B45C00DDA76B /* UIView+UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F6112B17F5B45C00DDA76B /* UIView+UIImageEffects.m */; };
@@ -62,6 +66,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7916EF4117FB182E0011C4AF /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		7916EF4917FB95680011C4AF /* KLModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLModalViewController.h; sourceTree = "<group>"; };
+		7916EF4A17FB95680011C4AF /* KLModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLModalViewController.m; sourceTree = "<group>"; };
+		7916EF4D17FB9AFA0011C4AF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7916EF4E17FB9AFA0011C4AF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKLViewControllerTransitions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5A8A717F4647E00696B55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		79A5A8AB17F4647E00696B55 /* KLViewControllerTransitions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLViewControllerTransitions-Prefix.pch"; sourceTree = "<group>"; };
@@ -84,8 +93,8 @@
 		79A5A8E317F464B400696B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79A5A8E517F464B400696B55 /* KLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLMasterViewController.h; sourceTree = "<group>"; };
 		79A5A8E617F464B400696B55 /* KLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLMasterViewController.m; sourceTree = "<group>"; };
-		79A5A8E817F464B400696B55 /* KLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLDetailViewController.h; sourceTree = "<group>"; };
-		79A5A8E917F464B400696B55 /* KLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLDetailViewController.m; sourceTree = "<group>"; };
+		79A5A8E817F464B400696B55 /* KLBlurDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLBlurDetailController.h; sourceTree = "<group>"; };
+		79A5A8E917F464B400696B55 /* KLBlurDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLBlurDetailController.m; sourceTree = "<group>"; };
 		79A5A8EB17F464B400696B55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		79A5A90517F512AF00696B55 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		79A5A90617F512AF00696B55 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
@@ -127,6 +136,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7916EF4617FB94070011C4AF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				79A5A90517F512AF00696B55 /* UIImage+ImageEffects.h */,
+				79A5A90617F512AF00696B55 /* UIImage+ImageEffects.m */,
+				79F6112A17F5B45C00DDA76B /* UIView+UIImageEffects.h */,
+				79F6112B17F5B45C00DDA76B /* UIView+UIImageEffects.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		7916EF4717FB94120011C4AF /* Blur */ = {
+			isa = PBXGroup;
+			children = (
+				79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */,
+				79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m */,
+			);
+			name = Blur;
+			sourceTree = "<group>";
+		};
 		79A5A89B17F4647E00696B55 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +164,8 @@
 				79A5A8D617F464B400696B55 /* KLModalTransitionsDemo */,
 				79A5A8A617F4647E00696B55 /* Frameworks */,
 				79A5A8A517F4647E00696B55 /* Products */,
+				7916EF4D17FB9AFA0011C4AF /* LICENSE */,
+				7916EF4E17FB9AFA0011C4AF /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,13 +193,9 @@
 		79A5A8A917F4647E00696B55 /* KLViewControllerTransitions */ = {
 			isa = PBXGroup;
 			children = (
-				79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */,
-				79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m */,
-				79A5A90517F512AF00696B55 /* UIImage+ImageEffects.h */,
-				79A5A90617F512AF00696B55 /* UIImage+ImageEffects.m */,
+				7916EF4717FB94120011C4AF /* Blur */,
+				7916EF4617FB94070011C4AF /* Categories */,
 				79A5A8AA17F4647E00696B55 /* Supporting Files */,
-				79F6112A17F5B45C00DDA76B /* UIView+UIImageEffects.h */,
-				79F6112B17F5B45C00DDA76B /* UIView+UIImageEffects.m */,
 			);
 			path = KLViewControllerTransitions;
 			sourceTree = "<group>";
@@ -208,8 +235,10 @@
 				79A5A8E217F464B400696B55 /* Main.storyboard */,
 				79A5A8E517F464B400696B55 /* KLMasterViewController.h */,
 				79A5A8E617F464B400696B55 /* KLMasterViewController.m */,
-				79A5A8E817F464B400696B55 /* KLDetailViewController.h */,
-				79A5A8E917F464B400696B55 /* KLDetailViewController.m */,
+				79A5A8E817F464B400696B55 /* KLBlurDetailController.h */,
+				79A5A8E917F464B400696B55 /* KLBlurDetailController.m */,
+				7916EF4917FB95680011C4AF /* KLModalViewController.h */,
+				7916EF4A17FB95680011C4AF /* KLModalViewController.m */,
 				79A5A8EB17F464B400696B55 /* Images.xcassets */,
 				79A5A8D717F464B400696B55 /* Supporting Files */,
 			);
@@ -220,6 +249,7 @@
 		79A5A8D717F464B400696B55 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7916EF4117FB182E0011C4AF /* background.jpg */,
 				79A5A8D817F464B400696B55 /* KLViewControllerTransitionsDemo-Info.plist */,
 				79A5A8D917F464B400696B55 /* InfoPlist.strings */,
 				79A5A8DC17F464B400696B55 /* main.m */,
@@ -331,9 +361,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7916EF5017FB9AFA0011C4AF /* README.md in Resources */,
 				79A5A8EC17F464B400696B55 /* Images.xcassets in Resources */,
+				7916EF4C17FB98290011C4AF /* background.jpg in Resources */,
 				79A5A8DB17F464B400696B55 /* InfoPlist.strings in Resources */,
 				79A5A8E417F464B400696B55 /* Main.storyboard in Resources */,
+				7916EF4F17FB9AFA0011C4AF /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +395,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A5A8EA17F464B400696B55 /* KLDetailViewController.m in Sources */,
+				7916EF4B17FB95680011C4AF /* KLModalViewController.m in Sources */,
+				79A5A8EA17F464B400696B55 /* KLBlurDetailController.m in Sources */,
 				79A5A8DD17F464B400696B55 /* main.m in Sources */,
 				79A5A8E117F464B400696B55 /* KLAppDelegate.m in Sources */,
 				79A5A8E717F464B400696B55 /* KLMasterViewController.m in Sources */,
