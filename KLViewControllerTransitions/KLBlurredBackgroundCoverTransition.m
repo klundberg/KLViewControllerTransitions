@@ -24,126 +24,115 @@ static NSInteger const BlurredViewTag = 19;
     if (self) {
         _mode = mode;
         _blurStyle = KLTransitionBlurStyleLight;
+        _transitionDuration = 0.4;
     }
     return self;
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 0.4;
+    return self.transitionDuration;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    UIViewController *modalController = [self modalController:transitionContext];
-    UIView *container = [transitionContext containerView];
-
-    UIView *blurredImageView = [self blurredViewForContext:transitionContext];
-
-    blurredImageView.frame = [self initialBlurredViewRect:transitionContext];
-    modalController.view.frame = [self initialModalControllerRect:transitionContext];
-
     if (self.mode == KLTransitionModeForwards) {
-        [container addSubview:blurredImageView];
-        [container addSubview:modalController.view];
+        [self setupForwardAnimation:transitionContext];
     } else {
-
+        [self setupReverseAnimation:transitionContext];
     }
 
-    [UIView animateWithDuration:[self transitionDuration:transitionContext]
-                          delay:0
-                        options:[self animationOptions]
-                     animations:^{
-                         blurredImageView.frame = [self finalBlurredViewRect:transitionContext];
-                         modalController.view.frame = [self finalModalControllerRect:transitionContext];
-                     } completion:^(BOOL finished) {
-                         if (self.mode == KLTransitionModeReverse) {
-                             [blurredImageView removeFromSuperview];
-                             [modalController.view removeFromSuperview];
-                         }
+    if (self.animated) {
+        [UIView animateWithDuration:self.transitionDuration
+                              delay:0
+                            options:[self animationOptions]
+                         animations:^{
+                             [self performAnimation:transitionContext];
+                         } completion:^(BOOL finished) {
+                             if (self.mode == KLTransitionModeForwards) {
+                                 [self finalizeForwardTransition:transitionContext];
+                             } else {
+                                 [self finalizeReverseTransition:transitionContext];
+                             }
+                             [transitionContext completeTransition:finished];
+                         }];
+    } else {
+        [self performAnimation:transitionContext];
+        if (self.mode == KLTransitionModeForwards) {
+            [self finalizeForwardTransition:transitionContext];
+        } else {
+            [self finalizeReverseTransition:transitionContext];
+        }
+        [transitionContext completeTransition:YES];
+    }
+}
 
-                         [transitionContext completeTransition:finished];
-                     }];
+- (void)setupForwardAnimation:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    UIView *container = [transitionContext containerView];
+    UIView *blurredImageView = [self createBlurredViewForContext:transitionContext];
+    [container addSubview:blurredImageView];
+
+    UIViewController *modalController = [self presentedController:transitionContext];
+    modalController.view.frame = [self initialPresentedControllerFrame:transitionContext];
+    [container addSubview:modalController.view];
+
+    if ([modalController isKindOfClass:[UINavigationController class]]) {
+        [self adjustNavigationBarForPresentedNavigationController:(id)modalController];
+    }
+}
+
+- (void)adjustNavigationBarForPresentedNavigationController:(UINavigationController *)navController
+{
+    // due to a bug in apple's code, the navigation bar of a navigation controller is 44 points tall when animating, and jumps to
+    // be tall enough to encompas the status bar only once the animation finishes. We need to manually set the frame of the navbar here to
+    // make it look correct.
+    CGRect frame = navController.navigationBar.frame;
+    frame.size.height += [[UIApplication sharedApplication] statusBarFrame].size.height;
+    navController.navigationBar.frame = frame;
+}
+
+- (void)setupReverseAnimation:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    UIViewController *sourceController = [self sourceController:transitionContext];
+    UIView *container = [transitionContext containerView];
+
+    [container addSubview:sourceController.view];
+    [container sendSubviewToBack:sourceController.view];
 }
 
 - (UIViewAnimationOptions)animationOptions
 {
-    if (self.mode == KLTransitionModeForwards) {
-        return UIViewAnimationOptionCurveEaseOut;
-    } else {
-        return UIViewAnimationOptionCurveEaseIn;
-    }
+    return UIViewAnimationOptionCurveEaseOut;
 }
 
-#pragma mark - blurred view states
-
-- (UIView *)blurredViewForContext:(id<UIViewControllerContextTransitioning>)transitionContext
+- (void)performAnimation:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    if (self.mode == KLTransitionModeForwards) {
-        UIViewController *fromController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIView *blurredImageView = [self blurredViewForContext:transitionContext];
+    UIViewController *modalController = [self presentedController:transitionContext];
 
-        UIImageView *blurredImageView = [self blurredView:fromController.view forStyle:self.blurStyle];
-        blurredImageView.tag = BlurredViewTag;
-        blurredImageView.contentMode = UIViewContentModeBottom;
-        blurredImageView.clipsToBounds = YES;
-
-        return blurredImageView;
-    } else {
-        return [[transitionContext containerView] viewWithTag:BlurredViewTag];
-    }
+    blurredImageView.frame = [self finalBlurredViewFrame:transitionContext];
+    modalController.view.frame = [self finalPresentedControllerFrame:transitionContext];
 }
 
-- (UIImageView *)blurredView:(UIView *)view forStyle:(KLTransitionBlurStyle)style
+- (void)finalizeForwardTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    switch (style) {
-        case KLTransitionBlurStyleExtraLight:
-            return [view extraLightBlurredView];
-        case KLTransitionBlurStyleDark:
-            return [view darkBlurredView];
-        case KLTransitionBlurStyleCustomTint:
-            return [view blurredViewWithTintColor:self.tintColor];
-        case KLTransitionBlurStyleLight:
-        default:
-            return [view lightBlurredView];
-    }
+    UIViewController *sourceController = [self sourceController:transitionContext];
+    [sourceController.view removeFromSuperview];
 }
 
-- (CGRect)initialBlurredViewRect:(id<UIViewControllerContextTransitioning>)transitionContext
+- (void)finalizeReverseTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    if (self.mode == KLTransitionModeForwards) {
-        return [self uncoveredBlurredViewRect:transitionContext];
-    } else {
-        return [self coveredBlurredViewRect:transitionContext];
-    }
+    UIView *blurredImageView = [self blurredViewForContext:transitionContext];
+    UIViewController *modalController = [self presentedController:transitionContext];
+
+    [blurredImageView removeFromSuperview];
+    [modalController.view removeFromSuperview];
 }
 
-- (CGRect)finalBlurredViewRect:(id<UIViewControllerContextTransitioning>)transitionContext
-{
-    if (self.mode == KLTransitionModeForwards) {
-        return [self coveredBlurredViewRect:transitionContext];
-    } else {
-        return [self uncoveredBlurredViewRect:transitionContext];
-    }
-}
+#pragma mark - View Controller helpers
 
-- (CGRect)coveredBlurredViewRect:(id<UIViewControllerContextTransitioning>)transitionContext
-{
-    UIViewController *fromController = [self sourceController:transitionContext];
-
-    return fromController.view.frame;
-}
-
-- (CGRect)uncoveredBlurredViewRect:(id<UIViewControllerContextTransitioning>)transitionContext
-{
-    CGRect frame = [self coveredBlurredViewRect:transitionContext];
-    frame.origin.y = frame.size.height;
-    frame.size.height = 0;
-    return frame;
-}
-
-#pragma mark - modal view states
-
-- (UIViewController *)modalController:(id<UIViewControllerContextTransitioning>)transitionContext
+- (UIViewController *)presentedController:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     if (self.mode == KLTransitionModeForwards) {
         return [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
@@ -161,34 +150,103 @@ static NSInteger const BlurredViewTag = 19;
     }
 }
 
-- (CGRect)initialModalControllerRect:(id<UIViewControllerContextTransitioning>)transitionContext
+#pragma mark - blurred view states
+
+- (UIView *)createBlurredViewForContext:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    if (self.mode == KLTransitionModeForwards) {
-        return [self uncoveredModalControllerRect:transitionContext];
-    } else {
-        return [self coveredModalControllerRect:transitionContext];
+    UIViewController *fromController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+
+    UIImageView *blurredImageView = [self blurredView:fromController.view forStyle:self.blurStyle];
+    blurredImageView.tag = BlurredViewTag;
+    blurredImageView.contentMode = UIViewContentModeBottom;
+    blurredImageView.clipsToBounds = YES;
+    blurredImageView.frame = [self initialBlurredViewFrame:transitionContext];
+
+    return blurredImageView;
+}
+
+- (UIView *)blurredViewForContext:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    return [[transitionContext containerView] viewWithTag:BlurredViewTag];
+}
+
+- (UIImageView *)blurredView:(UIView *)view forStyle:(KLTransitionBlurStyle)style
+{
+    switch (style) {
+        case KLTransitionBlurStyleExtraLight:
+            return [view extraLightBlurredView];
+        case KLTransitionBlurStyleDark:
+            return [view darkBlurredView];
+        case KLTransitionBlurStyleCustomTint:
+            return [view blurredViewWithTintColor:self.tintColor];
+        case KLTransitionBlurStyleLight:
+        default:
+            return [view lightBlurredView];
     }
 }
 
-- (CGRect)finalModalControllerRect:(id<UIViewControllerContextTransitioning>)transitionContext
+- (CGRect)initialBlurredViewFrame:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     if (self.mode == KLTransitionModeForwards) {
-        return [self coveredModalControllerRect:transitionContext];
+        return [self uncoveredBlurredViewFrame:transitionContext];
     } else {
-        return [self uncoveredModalControllerRect:transitionContext];
+        return [self coveredBlurredViewFrame:transitionContext];
     }
 }
 
-- (CGRect)coveredModalControllerRect:(id<UIViewControllerContextTransitioning>)transitionContext
+- (CGRect)finalBlurredViewFrame:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    UIViewController *toController = [self modalController:transitionContext];
+    if (self.mode == KLTransitionModeForwards) {
+        return [self coveredBlurredViewFrame:transitionContext];
+    } else {
+        return [self uncoveredBlurredViewFrame:transitionContext];
+    }
+}
+
+- (CGRect)coveredBlurredViewFrame:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    UIViewController *fromController = [self sourceController:transitionContext];
+    return fromController.view.frame;
+}
+
+- (CGRect)uncoveredBlurredViewFrame:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    CGRect frame = [self coveredBlurredViewFrame:transitionContext];
+    frame.origin.y = frame.size.height;
+    frame.size.height = 0;
+    return frame;
+}
+
+#pragma mark - modal view states
+
+- (CGRect)initialPresentedControllerFrame:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    if (self.mode == KLTransitionModeForwards) {
+        return [self uncoveredPresentedControllerFrame:transitionContext];
+    } else {
+        return [self coveredPresentedControllerFrame:transitionContext];
+    }
+}
+
+- (CGRect)finalPresentedControllerFrame:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    if (self.mode == KLTransitionModeForwards) {
+        return [self coveredPresentedControllerFrame:transitionContext];
+    } else {
+        return [self uncoveredPresentedControllerFrame:transitionContext];
+    }
+}
+
+- (CGRect)coveredPresentedControllerFrame:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    UIViewController *toController = [self presentedController:transitionContext];
 
     return CGRectMake(0, 0, toController.view.frame.size.width, toController.view.frame.size.height);
 }
 
-- (CGRect)uncoveredModalControllerRect:(id<UIViewControllerContextTransitioning>)transitionContext
+- (CGRect)uncoveredPresentedControllerFrame:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    CGRect frame = [self coveredModalControllerRect:transitionContext];
+    CGRect frame = [self coveredPresentedControllerFrame:transitionContext];
     frame.origin.y = frame.size.height;
 
     return frame;

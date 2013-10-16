@@ -11,19 +11,6 @@
 
 @implementation KLBlurDetailController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    self.styleControl = [[UISegmentedControl alloc] initWithItems:@[@"Light",@"Extra Light",@"Dark",@"Custom"]];
-    self.styleControl.selectedSegmentIndex = 0;
-
-    self.toolbarItems = @[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:Nil action:nil],
-                          [[UIBarButtonItem alloc] initWithCustomView:self.styleControl],
-                          [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:Nil action:nil],
-                          ];
-}
-
 - (IBAction)presentController:(id)sender
 {
     [self performSegueWithIdentifier:@"modalSegue" sender:sender];
@@ -41,12 +28,14 @@
     KLBlurredBackgroundCoverTransition *transition = [[KLBlurredBackgroundCoverTransition alloc] init];
     transition.blurStyle = self.styleControl.selectedSegmentIndex;
     transition.tintColor = self.view.tintColor;
+    transition.animated = self.animatedSwitch.on;
     return transition;
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
     KLBlurredBackgroundCoverTransition *transition = [[KLBlurredBackgroundCoverTransition alloc] initWithMode:KLTransitionModeReverse];
+    transition.animated = self.animatedSwitch.on;
     return transition;
 }
 

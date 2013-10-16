@@ -11,14 +11,20 @@
 
 typedef NS_ENUM(NSInteger, KLTransitionMode) {
     KLTransitionModeForwards,
-    KLTransitionModeReverse
+    KLTransitionModeReverse,
 };
 
 typedef NS_ENUM(NSInteger, KLTransitionBlurStyle) {
     KLTransitionBlurStyleLight,
     KLTransitionBlurStyleExtraLight,
     KLTransitionBlurStyleDark,
-    KLTransitionBlurStyleCustomTint
+    KLTransitionBlurStyleCustomTint,
+};
+
+typedef NS_ENUM(NSInteger, KLTransitionType) {
+    KLTransitionTypeCoverVertical,
+    KLTransitionTypeCrossFade,
+    KLTransitionTypePageCurl,
 };
 
 @interface KLBlurredBackgroundCoverTransition : NSObject <UIViewControllerAnimatedTransitioning>
@@ -28,5 +34,7 @@ typedef NS_ENUM(NSInteger, KLTransitionBlurStyle) {
 @property (nonatomic, assign, readonly) KLTransitionMode mode;
 @property (nonatomic, assign) KLTransitionBlurStyle blurStyle;
 @property (nonatomic, strong) UIColor *tintColor;
+@property (nonatomic, assign) NSTimeInterval transitionDuration;
+@property (nonatomic, assign, getter = isAnimated) BOOL animated;
 
 @end

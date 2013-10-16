@@ -8,15 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, KLTransitionType)
-{
-    KLTransitionTypeCoverVertical
-};
+#import "KLBlurredBackgroundCoverTransition.h"
 
 @interface KLBlurDetailController : UIViewController <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, assign) KLTransitionType transitionType;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *styleControl;
+@property (weak, nonatomic) IBOutlet UISwitch *animatedSwitch;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *styleControl;
 
 - (IBAction)presentController:(id)sender;
 @end

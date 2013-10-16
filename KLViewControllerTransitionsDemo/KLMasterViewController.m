@@ -54,6 +54,10 @@
         case KLTransitionTypeCoverVertical:
             text = @"Cover Vertical With Blur";
             break;
+        case KLTransitionTypeCrossFade:
+        case KLTransitionTypePageCurl:
+        default:
+            break;
     }
 
     cell.textLabel.text = text;
