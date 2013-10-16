@@ -34,7 +34,6 @@ typedef NS_ENUM(NSInteger, KLTransitionType) {
 @property (nonatomic, assign, readonly) KLTransitionMode mode;
 @property (nonatomic, assign) KLTransitionBlurStyle blurStyle;
 @property (nonatomic, strong) UIColor *tintColor;
-@property (nonatomic, assign) NSTimeInterval transitionDuration;
 @property (nonatomic, assign, getter = isAnimated) BOOL animated;
 
 @end

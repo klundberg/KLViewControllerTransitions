@@ -24,46 +24,46 @@ static NSInteger const BlurredViewTag = 19;
     if (self) {
         _mode = mode;
         _blurStyle = KLTransitionBlurStyleLight;
-        _transitionDuration = 0.4;
     }
     return self;
 }
 
+#pragma mark - UIViewControllerAnimatedTransitioning
+
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return self.transitionDuration;
+    return 0.4;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    if (self.mode == KLTransitionModeForwards) {
-        [self setupForwardAnimation:transitionContext];
-    } else {
-        [self setupReverseAnimation:transitionContext];
-    }
+    [self setupAnimation:transitionContext];
 
     if (self.animated) {
-        [UIView animateWithDuration:self.transitionDuration
+        [UIView animateWithDuration:[self transitionDuration:transitionContext]
                               delay:0
                             options:[self animationOptions]
                          animations:^{
                              [self performAnimation:transitionContext];
                          } completion:^(BOOL finished) {
-                             if (self.mode == KLTransitionModeForwards) {
-                                 [self finalizeForwardTransition:transitionContext];
-                             } else {
-                                 [self finalizeReverseTransition:transitionContext];
-                             }
+                             [self finalizeAnimation:transitionContext];
                              [transitionContext completeTransition:finished];
                          }];
     } else {
         [self performAnimation:transitionContext];
-        if (self.mode == KLTransitionModeForwards) {
-            [self finalizeForwardTransition:transitionContext];
-        } else {
-            [self finalizeReverseTransition:transitionContext];
-        }
+        [self finalizeAnimation:transitionContext];
         [transitionContext completeTransition:YES];
+    }
+}
+
+#pragma mark - helpers
+
+- (void)setupAnimation:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    if (self.mode == KLTransitionModeForwards) {
+        [self setupForwardAnimation:transitionContext];
+    } else {
+        [self setupReverseAnimation:transitionContext];
     }
 }
 
@@ -85,8 +85,8 @@ static NSInteger const BlurredViewTag = 19;
 - (void)adjustNavigationBarForPresentedNavigationController:(UINavigationController *)navController
 {
     // due to a bug in apple's code, the navigation bar of a navigation controller is 44 points tall when animating, and jumps to
-    // be tall enough to encompas the status bar only once the animation finishes. We need to manually set the frame of the navbar here to
-    // make it look correct.
+    // be tall enough to encompas the status bar only when the animation finishes. We need to manually set the frame of the navbar here to
+    // make it look correct while animating in.
     CGRect frame = navController.navigationBar.frame;
     frame.size.height += [[UIApplication sharedApplication] statusBarFrame].size.height;
     navController.navigationBar.frame = frame;
@@ -113,6 +113,15 @@ static NSInteger const BlurredViewTag = 19;
 
     blurredImageView.frame = [self finalBlurredViewFrame:transitionContext];
     modalController.view.frame = [self finalPresentedControllerFrame:transitionContext];
+}
+
+- (void)finalizeAnimation:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    if (self.mode == KLTransitionModeForwards) {
+        [self finalizeForwardTransition:transitionContext];
+    } else {
+        [self finalizeReverseTransition:transitionContext];
+    }
 }
 
 - (void)finalizeForwardTransition:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -251,6 +260,5 @@ static NSInteger const BlurredViewTag = 19;
 
     return frame;
 }
-
 
 @end
