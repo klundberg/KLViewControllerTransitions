@@ -8,30 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "KLTransitionEnums.h"
 
-typedef NS_ENUM(NSInteger, KLTransitionMode) {
-    KLTransitionModeForwards,
-    KLTransitionModeReverse,
-};
-
-typedef NS_ENUM(NSInteger, KLTransitionBlurStyle) {
-    KLTransitionBlurStyleLight,
-    KLTransitionBlurStyleExtraLight,
-    KLTransitionBlurStyleDark,
-    KLTransitionBlurStyleCustomTint,
-};
-
-typedef NS_ENUM(NSInteger, KLTransitionType) {
-    KLTransitionTypeCoverVertical,
-    KLTransitionTypeCrossFade,
-    KLTransitionTypePageCurl,
-};
 
 @interface KLBlurredBackgroundCoverTransition : NSObject <UIViewControllerAnimatedTransitioning>
 
-- (instancetype)initWithMode:(KLTransitionMode)direction;
+- (instancetype)initWithDirection:(KLTransitionDirection)direction;
 
-@property (nonatomic, assign, readonly) KLTransitionMode mode;
+@property (nonatomic, assign, readonly) KLTransitionDirection direction;
 @property (nonatomic, assign) KLTransitionBlurStyle blurStyle;
 @property (nonatomic, strong) UIColor *tintColor;
 @property (nonatomic, assign, getter = isAnimated) BOOL animated;

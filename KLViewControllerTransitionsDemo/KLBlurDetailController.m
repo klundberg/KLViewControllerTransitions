@@ -34,7 +34,7 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
-    KLBlurredBackgroundCoverTransition *transition = [[KLBlurredBackgroundCoverTransition alloc] initWithMode:KLTransitionModeReverse];
+    KLBlurredBackgroundCoverTransition *transition = [[KLBlurredBackgroundCoverTransition alloc] initWithDirection:KLTransitionDirectionReverse];
     transition.animated = self.animatedSwitch.on;
     return transition;
 }

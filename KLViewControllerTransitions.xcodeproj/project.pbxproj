@@ -11,6 +11,7 @@
 		7916EF4C17FB98290011C4AF /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7916EF4117FB182E0011C4AF /* background.jpg */; };
 		7916EF4F17FB9AFA0011C4AF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7916EF4D17FB9AFA0011C4AF /* LICENSE */; };
 		7916EF5017FB9AFA0011C4AF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7916EF4E17FB9AFA0011C4AF /* README.md */; };
+		79320488180EDC77004D41BD /* KLTransitionContextDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 79320487180EDC77004D41BD /* KLTransitionContextDecorator.m */; };
 		79A5A8A817F4647E00696B55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A717F4647E00696B55 /* Foundation.framework */; };
 		79A5A8AD17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */; };
 		79A5A8AF17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m */; };
@@ -71,6 +72,9 @@
 		7916EF4A17FB95680011C4AF /* KLModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLModalViewController.m; sourceTree = "<group>"; };
 		7916EF4D17FB9AFA0011C4AF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7916EF4E17FB9AFA0011C4AF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		79320486180EDC77004D41BD /* KLTransitionContextDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTransitionContextDecorator.h; sourceTree = "<group>"; };
+		79320487180EDC77004D41BD /* KLTransitionContextDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTransitionContextDecorator.m; sourceTree = "<group>"; };
+		79320489180EDE33004D41BD /* KLTransitionEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTransitionEnums.h; sourceTree = "<group>"; };
 		79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKLViewControllerTransitions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5A8A717F4647E00696B55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		79A5A8AB17F4647E00696B55 /* KLViewControllerTransitions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLViewControllerTransitions-Prefix.pch"; sourceTree = "<group>"; };
@@ -156,6 +160,23 @@
 			name = Blur;
 			sourceTree = "<group>";
 		};
+		79320484180EDC54004D41BD /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				79320486180EDC77004D41BD /* KLTransitionContextDecorator.h */,
+				79320487180EDC77004D41BD /* KLTransitionContextDecorator.m */,
+			);
+			name = Decorators;
+			sourceTree = "<group>";
+		};
+		79320485180EDC5D004D41BD /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				7916EF4717FB94120011C4AF /* Blur */,
+			);
+			name = Animators;
+			sourceTree = "<group>";
+		};
 		79A5A89B17F4647E00696B55 = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +214,9 @@
 		79A5A8A917F4647E00696B55 /* KLViewControllerTransitions */ = {
 			isa = PBXGroup;
 			children = (
-				7916EF4717FB94120011C4AF /* Blur */,
+				79320489180EDE33004D41BD /* KLTransitionEnums.h */,
+				79320485180EDC5D004D41BD /* Animators */,
+				79320484180EDC54004D41BD /* Decorators */,
 				7916EF4617FB94070011C4AF /* Categories */,
 				79A5A8AA17F4647E00696B55 /* Supporting Files */,
 			);
@@ -380,6 +403,7 @@
 				79A5A90717F512AF00696B55 /* UIImage+ImageEffects.m in Sources */,
 				79A5A8AF17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m in Sources */,
 				79F6112C17F5B45C00DDA76B /* UIView+UIImageEffects.m in Sources */,
+				79320488180EDC77004D41BD /* KLTransitionContextDecorator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
