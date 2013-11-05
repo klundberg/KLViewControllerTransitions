@@ -33,7 +33,7 @@ static NSInteger const BlurredViewTag = 19;
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 0.4;
+    return 0.35;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext

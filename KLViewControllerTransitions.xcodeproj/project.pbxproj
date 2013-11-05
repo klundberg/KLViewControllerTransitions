@@ -12,6 +12,8 @@
 		7916EF4F17FB9AFA0011C4AF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7916EF4D17FB9AFA0011C4AF /* LICENSE */; };
 		7916EF5017FB9AFA0011C4AF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7916EF4E17FB9AFA0011C4AF /* README.md */; };
 		79320488180EDC77004D41BD /* KLTransitionContextDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 79320487180EDC77004D41BD /* KLTransitionContextDecorator.m */; };
+		7932048C181566F2004D41BD /* KLBlurredBackgroundTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932048B181566F2004D41BD /* KLBlurredBackgroundTransition.m */; };
+		7932048E181567C6004D41BD /* KLBlurredBackgroundCoverTransitionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932048D181567C6004D41BD /* KLBlurredBackgroundCoverTransitionTest.m */; };
 		79A5A8A817F4647E00696B55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A717F4647E00696B55 /* Foundation.framework */; };
 		79A5A8AD17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */; };
 		79A5A8AF17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m */; };
@@ -20,7 +22,6 @@
 		79A5A8B917F4647E00696B55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8B817F4647E00696B55 /* UIKit.framework */; };
 		79A5A8BC17F4647E00696B55 /* libKLViewControllerTransitions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */; };
 		79A5A8C217F4647E00696B55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79A5A8C017F4647E00696B55 /* InfoPlist.strings */; };
-		79A5A8C417F4647E00696B55 /* KLModalTransitionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8C317F4647E00696B55 /* KLModalTransitionsTests.m */; };
 		79A5A8D217F464B400696B55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A717F4647E00696B55 /* Foundation.framework */; };
 		79A5A8D417F464B400696B55 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8D317F464B400696B55 /* CoreGraphics.framework */; };
 		79A5A8D517F464B400696B55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8B817F4647E00696B55 /* UIKit.framework */; };
@@ -32,6 +33,7 @@
 		79A5A8EA17F464B400696B55 /* KLBlurDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8E917F464B400696B55 /* KLBlurDetailController.m */; };
 		79A5A8EC17F464B400696B55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A5A8EB17F464B400696B55 /* Images.xcassets */; };
 		79A5A90717F512AF00696B55 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A90617F512AF00696B55 /* UIImage+ImageEffects.m */; };
+		79A6115F18292F5B007BAA10 /* KLTestTransitionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A6115E18292F5B007BAA10 /* KLTestTransitionContext.m */; };
 		79F6112C17F5B45C00DDA76B /* UIView+UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F6112B17F5B45C00DDA76B /* UIView+UIImageEffects.m */; };
 		79F6113217F5BB2E00DDA76B /* libKLViewControllerTransitions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,9 @@
 		79320486180EDC77004D41BD /* KLTransitionContextDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTransitionContextDecorator.h; sourceTree = "<group>"; };
 		79320487180EDC77004D41BD /* KLTransitionContextDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTransitionContextDecorator.m; sourceTree = "<group>"; };
 		79320489180EDE33004D41BD /* KLTransitionEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTransitionEnums.h; sourceTree = "<group>"; };
+		7932048A181566F2004D41BD /* KLBlurredBackgroundTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLBlurredBackgroundTransition.h; sourceTree = "<group>"; };
+		7932048B181566F2004D41BD /* KLBlurredBackgroundTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBlurredBackgroundTransition.m; sourceTree = "<group>"; };
+		7932048D181567C6004D41BD /* KLBlurredBackgroundCoverTransitionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBlurredBackgroundCoverTransitionTest.m; sourceTree = "<group>"; };
 		79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKLViewControllerTransitions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5A8A717F4647E00696B55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		79A5A8AB17F4647E00696B55 /* KLViewControllerTransitions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLViewControllerTransitions-Prefix.pch"; sourceTree = "<group>"; };
@@ -85,7 +90,6 @@
 		79A5A8B817F4647E00696B55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		79A5A8BF17F4647E00696B55 /* KLViewControllerTransitionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KLViewControllerTransitionsTests-Info.plist"; sourceTree = "<group>"; };
 		79A5A8C117F4647E00696B55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		79A5A8C317F4647E00696B55 /* KLModalTransitionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLModalTransitionsTests.m; sourceTree = "<group>"; };
 		79A5A8D117F464B300696B55 /* KLViewControllerTransitionsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLViewControllerTransitionsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5A8D317F464B400696B55 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		79A5A8D817F464B400696B55 /* KLViewControllerTransitionsDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KLViewControllerTransitionsDemo-Info.plist"; sourceTree = "<group>"; };
@@ -102,6 +106,9 @@
 		79A5A8EB17F464B400696B55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		79A5A90517F512AF00696B55 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		79A5A90617F512AF00696B55 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		79A6115D18292F5B007BAA10 /* KLTestTransitionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTestTransitionContext.h; sourceTree = "<group>"; };
+		79A6115E18292F5B007BAA10 /* KLTestTransitionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTestTransitionContext.m; sourceTree = "<group>"; };
+		79A6116018293012007BAA10 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		79F6112A17F5B45C00DDA76B /* UIView+UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIImageEffects.h"; sourceTree = "<group>"; };
 		79F6112B17F5B45C00DDA76B /* UIView+UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIImageEffects.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +163,8 @@
 			children = (
 				79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */,
 				79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m */,
+				7932048A181566F2004D41BD /* KLBlurredBackgroundTransition.h */,
+				7932048B181566F2004D41BD /* KLBlurredBackgroundTransition.m */,
 			);
 			name = Blur;
 			sourceTree = "<group>";
@@ -187,6 +196,7 @@
 				79A5A8A517F4647E00696B55 /* Products */,
 				7916EF4D17FB9AFA0011C4AF /* LICENSE */,
 				7916EF4E17FB9AFA0011C4AF /* README.md */,
+				79A6116018293012007BAA10 /* Podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,8 +244,10 @@
 		79A5A8BD17F4647E00696B55 /* KLModalTransitionsTests */ = {
 			isa = PBXGroup;
 			children = (
-				79A5A8C317F4647E00696B55 /* KLModalTransitionsTests.m */,
 				79A5A8BE17F4647E00696B55 /* Supporting Files */,
+				7932048D181567C6004D41BD /* KLBlurredBackgroundCoverTransitionTest.m */,
+				79A6115D18292F5B007BAA10 /* KLTestTransitionContext.h */,
+				79A6115E18292F5B007BAA10 /* KLTestTransitionContext.m */,
 			);
 			name = KLModalTransitionsTests;
 			path = KLViewControllerTransitionsTests;
@@ -347,7 +359,7 @@
 				ORGANIZATIONNAME = Lundbergsoft;
 				TargetAttributes = {
 					79A5A8B317F4647E00696B55 = {
-						TestTargetID = 79A5A8D017F464B300696B55;
+						TestTargetID = 79A5A8A317F4647E00696B55;
 					};
 				};
 			};
@@ -403,6 +415,7 @@
 				79A5A90717F512AF00696B55 /* UIImage+ImageEffects.m in Sources */,
 				79A5A8AF17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m in Sources */,
 				79F6112C17F5B45C00DDA76B /* UIView+UIImageEffects.m in Sources */,
+				7932048C181566F2004D41BD /* KLBlurredBackgroundTransition.m in Sources */,
 				79320488180EDC77004D41BD /* KLTransitionContextDecorator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,7 +424,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A5A8C417F4647E00696B55 /* KLModalTransitionsTests.m in Sources */,
+				7932048E181567C6004D41BD /* KLBlurredBackgroundCoverTransitionTest.m in Sources */,
+				79A6115F18292F5B007BAA10 /* KLTestTransitionContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +581,6 @@
 		79A5A8CB17F4647E00696B55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KLViewControllerTransitionsDemo.app/KLViewControllerTransitionsDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -581,7 +594,6 @@
 				);
 				INFOPLIST_FILE = "KLViewControllerTransitionsTests/KLViewControllerTransitionsTests-Info.plist";
 				PRODUCT_NAME = KLViewControllerTransitionsTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -589,7 +601,6 @@
 		79A5A8CC17F4647E00696B55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KLViewControllerTransitionsDemo.app/KLViewControllerTransitionsDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -599,7 +610,6 @@
 				GCC_PREFIX_HEADER = "KLViewControllerTransitions/KLViewControllerTransitions-Prefix.pch";
 				INFOPLIST_FILE = "KLViewControllerTransitionsTests/KLViewControllerTransitionsTests-Info.plist";
 				PRODUCT_NAME = KLViewControllerTransitionsTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

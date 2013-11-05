@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import "KLBlurredBackgroundTransition.h"
 #import "KLTransitionEnums.h"
 
 
-@interface KLBlurredBackgroundCoverTransition : NSObject <UIViewControllerAnimatedTransitioning>
+@interface KLBlurredBackgroundCoverTransition : KLBlurredBackgroundTransition <UIViewControllerAnimatedTransitioning>
 
 - (instancetype)initWithDirection:(KLTransitionDirection)direction;
 
-@property (nonatomic, assign, readonly) KLTransitionDirection direction;
+@property (nonatomic, assign) KLTransitionDirection direction;
 @property (nonatomic, assign) KLTransitionBlurStyle blurStyle;
 @property (nonatomic, strong) UIColor *tintColor;
 @property (nonatomic, assign, getter = isAnimated) BOOL animated;
