@@ -9,6 +9,8 @@
 #import "KLSpinFromCenterTransition.h"
 #import "KLTransitionContextDecorator.h"
 
+#define DEGREES_TO_RADIANS(deg) (deg / 180.0 * M_PI)
+
 @implementation KLSpinFromCenterTransition
 
 - (id)init
@@ -18,6 +20,15 @@
         _rotations = 1;
     }
     return self;
+}
+
+- (void)setRotations:(NSUInteger)rotations
+{
+    if (rotations == 0) {
+        _rotations = 1;
+    } else {
+        _rotations = rotations;
+    }
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -46,7 +57,7 @@
                           delay:0.0f
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{
-                         view.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(step/steps, step/steps),  90 * step / 180.0f * M_PI);
+                         view.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(step/steps, step/steps), DEGREES_TO_RADIANS(90 * step));
                      }
                      completion:^(BOOL finished) {
                          if (step < steps){
