@@ -23,7 +23,8 @@
 {
     [super viewDidLoad];
 
-    self.transitionOptions = @[@(KLTransitionTypeCoverVertical)];
+    self.transitionOptions = @[@(KLTransitionTypeCoverVertical),
+                               @(KLTransitionTypeSpinFromCenter)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -33,36 +34,6 @@
 }
 
 #pragma mark - Table View
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.transitionOptions.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSString *text = @"";
-    KLTransitionType type = [self.transitionOptions[indexPath.row] integerValue];
-    switch (type) {
-        case KLTransitionTypeCoverVertical:
-            text = @"Cover Vertical With Blur";
-            break;
-        case KLTransitionTypeCrossFade:
-        case KLTransitionTypePageCurl:
-        default:
-            break;
-    }
-
-    cell.textLabel.text = text;
-    return cell;
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

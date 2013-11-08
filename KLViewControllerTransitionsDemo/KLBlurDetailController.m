@@ -7,13 +7,19 @@
 //
 
 #import "KLBlurDetailController.h"
+#import "KLTransitionEnums.h"
 #import "KLBlurredBackgroundCoverTransition.h"
+#import "KLSpinFromCenterTransition.h"
 
 @implementation KLBlurDetailController
 
 - (IBAction)presentController:(id)sender
 {
-    [self performSegueWithIdentifier:@"modalSegue" sender:sender];
+    if (self.transitionType == KLTransitionTypeSpinFromCenter) {
+        [self performSegueWithIdentifier:@"modalSequeOpaque" sender:sender];
+    } else {
+        [self performSegueWithIdentifier:@"modalSegue" sender:sender];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -25,11 +31,18 @@
 
 - (id<UIViewControllerAnimatedTransitioning>) animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
-    KLBlurredBackgroundCoverTransition *transition = [[KLBlurredBackgroundCoverTransition alloc] init];
-    transition.blurStyle = self.styleControl.selectedSegmentIndex;
-    transition.tintColor = self.view.tintColor;
-    transition.animated = self.animatedSwitch.on;
-    return transition;
+    if (self.transitionType == KLTransitionTypeCoverVertical) {
+        KLBlurredBackgroundCoverTransition *transition = [[KLBlurredBackgroundCoverTransition alloc] init];
+        transition.blurStyle = self.styleControl.selectedSegmentIndex;
+        transition.tintColor = self.view.tintColor;
+        transition.animated = self.animatedSwitch.on;
+        return transition;
+    } else if (self.transitionType == KLTransitionTypeSpinFromCenter) {
+        KLSpinFromCenterTransition *transition = [[KLSpinFromCenterTransition alloc] init];
+        transition.direction = KLTransitionDirectionForwards;
+        return transition;
+    }
+    return nil;
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed

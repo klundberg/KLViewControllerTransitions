@@ -22,6 +22,8 @@
 
 @interface KLTransitionContextDecorator : NSProxy <KLViewControllerContextTransitioning>
 
++ (instancetype)decoratorWithTransitionContext:(id<UIViewControllerContextTransitioning>)transitionContext direction:(KLTransitionDirection)direction;
+
 - (instancetype)initWithTransitionContext:(id<UIViewControllerContextTransitioning>)transitionContext direction:(KLTransitionDirection)direction;
 
 @end

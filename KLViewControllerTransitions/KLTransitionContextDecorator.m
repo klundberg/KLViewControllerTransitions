@@ -22,6 +22,12 @@
 @dynamic originalViewController;
 @dynamic presentedViewController;
 
+
++ (instancetype)decoratorWithTransitionContext:(id<UIViewControllerContextTransitioning>)transitionContext direction:(KLTransitionDirection)direction
+{
+    return [[self alloc] initWithTransitionContext:transitionContext direction:direction];
+}
+
 - (instancetype)initWithTransitionContext:(id<UIViewControllerContextTransitioning>)transitionContext direction:(KLTransitionDirection)direction
 {
     if (transitionContext == nil) {
