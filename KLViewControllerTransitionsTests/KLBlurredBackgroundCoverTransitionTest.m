@@ -9,7 +9,9 @@
 #import <XCTest/XCTest.h>
 #import "KLViewControllerTransitions.h"
 
+#define MOCKITO_SHORTHAND 1
 #import <OCMockito/OCMockito.h>
+#define HAMCREST_SHORTHAND 1
 #import <OCHamcrest/OCHamcrest.h>
 
 @interface KLBlurredBackgroundCoverTransitionTest : XCTestCase
