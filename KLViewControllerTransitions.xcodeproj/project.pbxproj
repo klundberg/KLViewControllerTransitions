@@ -14,6 +14,13 @@
 		79320488180EDC77004D41BD /* KLTransitionContextDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 79320487180EDC77004D41BD /* KLTransitionContextDecorator.m */; };
 		7932048C181566F2004D41BD /* KLBlurredBackgroundTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932048B181566F2004D41BD /* KLBlurredBackgroundTransition.m */; };
 		7932048E181567C6004D41BD /* KLBlurredBackgroundCoverTransitionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932048D181567C6004D41BD /* KLBlurredBackgroundCoverTransitionTest.m */; };
+		798FACFC182D23D8002994FF /* KLViewControllerTransitions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 798FACFB182D23AD002994FF /* KLViewControllerTransitions.h */; };
+		798FACFD182D23D8002994FF /* KLTransitionEnums.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79320489180EDE33004D41BD /* KLTransitionEnums.h */; };
+		798FACFE182D23D8002994FF /* KLSpinFromCenterTransition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A61162182BD17D007BAA10 /* KLSpinFromCenterTransition.h */; };
+		798FACFF182D23D8002994FF /* KLBlurredBackgroundTransition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7932048A181566F2004D41BD /* KLBlurredBackgroundTransition.h */; };
+		798FAD00182D23D8002994FF /* KLTransitionContextDecorator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79320486180EDC77004D41BD /* KLTransitionContextDecorator.h */; };
+		798FAD01182D23D8002994FF /* UIImage+ImageEffects.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A5A90517F512AF00696B55 /* UIImage+ImageEffects.h */; };
+		798FAD02182D23D8002994FF /* UIView+UIImageEffects.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79F6112A17F5B45C00DDA76B /* UIView+UIImageEffects.h */; };
 		79A5A8A817F4647E00696B55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A717F4647E00696B55 /* Foundation.framework */; };
 		79A5A8AD17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A5A8AC17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h */; };
 		79A5A8AF17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5A8AE17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m */; };
@@ -37,6 +44,7 @@
 		79A61164182BD17D007BAA10 /* KLSpinFromCenterTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A61163182BD17D007BAA10 /* KLSpinFromCenterTransition.m */; };
 		79F6112C17F5B45C00DDA76B /* UIView+UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F6112B17F5B45C00DDA76B /* UIView+UIImageEffects.m */; };
 		79F6113217F5BB2E00DDA76B /* libKLViewControllerTransitions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */; };
+		E82EC80C9F3045429DC9A48C /* libPods-KLViewControllerTransitionsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B2941C0B2A4D2693C5CC41 /* libPods-KLViewControllerTransitionsTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,13 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				798FACFC182D23D8002994FF /* KLViewControllerTransitions.h in CopyFiles */,
+				798FACFD182D23D8002994FF /* KLTransitionEnums.h in CopyFiles */,
+				798FACFE182D23D8002994FF /* KLSpinFromCenterTransition.h in CopyFiles */,
+				798FACFF182D23D8002994FF /* KLBlurredBackgroundTransition.h in CopyFiles */,
+				798FAD00182D23D8002994FF /* KLTransitionContextDecorator.h in CopyFiles */,
+				798FAD01182D23D8002994FF /* UIImage+ImageEffects.h in CopyFiles */,
+				798FAD02182D23D8002994FF /* UIView+UIImageEffects.h in CopyFiles */,
 				79A5A8AD17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +85,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		33284E7404EF435E9148945F /* Pods-KLViewControllerTransitionsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLViewControllerTransitionsTests.xcconfig"; path = "Pods/Pods-KLViewControllerTransitionsTests.xcconfig"; sourceTree = "<group>"; };
+		44B2941C0B2A4D2693C5CC41 /* libPods-KLViewControllerTransitionsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KLViewControllerTransitionsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7916EF4117FB182E0011C4AF /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		7916EF4917FB95680011C4AF /* KLModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLModalViewController.h; sourceTree = "<group>"; };
 		7916EF4A17FB95680011C4AF /* KLModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLModalViewController.m; sourceTree = "<group>"; };
@@ -81,6 +98,7 @@
 		7932048A181566F2004D41BD /* KLBlurredBackgroundTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLBlurredBackgroundTransition.h; sourceTree = "<group>"; };
 		7932048B181566F2004D41BD /* KLBlurredBackgroundTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBlurredBackgroundTransition.m; sourceTree = "<group>"; };
 		7932048D181567C6004D41BD /* KLBlurredBackgroundCoverTransitionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBlurredBackgroundCoverTransitionTest.m; sourceTree = "<group>"; };
+		798FACFB182D23AD002994FF /* KLViewControllerTransitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLViewControllerTransitions.h; sourceTree = "<group>"; };
 		79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKLViewControllerTransitions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5A8A717F4647E00696B55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		79A5A8AB17F4647E00696B55 /* KLViewControllerTransitions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLViewControllerTransitions-Prefix.pch"; sourceTree = "<group>"; };
@@ -133,6 +151,7 @@
 				79A5A8B917F4647E00696B55 /* UIKit.framework in Frameworks */,
 				79A5A8B717F4647E00696B55 /* Foundation.framework in Frameworks */,
 				79A5A8BC17F4647E00696B55 /* libKLViewControllerTransitions.a in Frameworks */,
+				E82EC80C9F3045429DC9A48C /* libPods-KLViewControllerTransitionsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +220,7 @@
 				7916EF4D17FB9AFA0011C4AF /* LICENSE */,
 				7916EF4E17FB9AFA0011C4AF /* README.md */,
 				79A6116018293012007BAA10 /* Podfile */,
+				33284E7404EF435E9148945F /* Pods-KLViewControllerTransitionsTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,6 +241,7 @@
 				79A5A8B517F4647E00696B55 /* XCTest.framework */,
 				79A5A8B817F4647E00696B55 /* UIKit.framework */,
 				79A5A8D317F464B400696B55 /* CoreGraphics.framework */,
+				44B2941C0B2A4D2693C5CC41 /* libPods-KLViewControllerTransitionsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -228,6 +249,7 @@
 		79A5A8A917F4647E00696B55 /* KLViewControllerTransitions */ = {
 			isa = PBXGroup;
 			children = (
+				798FACFB182D23AD002994FF /* KLViewControllerTransitions.h */,
 				79320489180EDE33004D41BD /* KLTransitionEnums.h */,
 				79320485180EDC5D004D41BD /* Animators */,
 				79320484180EDC54004D41BD /* Decorators */,
@@ -328,9 +350,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79A5A8CA17F4647E00696B55 /* Build configuration list for PBXNativeTarget "KLViewControllerTransitionsTests" */;
 			buildPhases = (
+				38484FE0122440F28E89DDE5 /* Check Pods Manifest.lock */,
 				79A5A8B017F4647E00696B55 /* Sources */,
 				79A5A8B117F4647E00696B55 /* Frameworks */,
 				79A5A8B217F4647E00696B55 /* Resources */,
+				0B19AFF83273463CAC5B5E48 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -417,6 +441,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B19AFF83273463CAC5B5E48 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-KLViewControllerTransitionsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38484FE0122440F28E89DDE5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79A5A8A017F4647E00696B55 /* Sources */ = {
@@ -592,6 +649,7 @@
 		};
 		79A5A8CB17F4647E00696B55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33284E7404EF435E9148945F /* Pods-KLViewControllerTransitionsTests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -612,6 +670,7 @@
 		};
 		79A5A8CC17F4647E00696B55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33284E7404EF435E9148945F /* Pods-KLViewControllerTransitionsTests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

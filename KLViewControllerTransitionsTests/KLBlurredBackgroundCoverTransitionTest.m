@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "KLBlurredBackgroundCoverTransition.h"
+#import "KLViewControllerTransitions.h"
 
 @interface KLBlurredBackgroundCoverTransitionTest : XCTestCase
 {
@@ -38,7 +38,7 @@
     [super tearDown];
 }
 
-- (void)test_finalTransitionFramesWorkAsExpected
+- (void)test_finalTransitionFramePositionedProperly
 {
     
 }
