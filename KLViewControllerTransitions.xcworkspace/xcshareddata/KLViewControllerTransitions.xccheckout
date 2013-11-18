@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7FA9705D-DBF1-4857-8ED5-1E86012905ED</string>
+	<key>IDESourceControlProjectName</key>
+	<string>KLViewControllerTransitions</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E4D63837-36B6-467D-B2E9-DEDA0B2A0C67</key>
+		<string>https://github.com/klundberg/KLViewControllerTransitions.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>KLViewControllerTransitions.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E4D63837-36B6-467D-B2E9-DEDA0B2A0C67</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/klundberg/KLViewControllerTransitions.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E4D63837-36B6-467D-B2E9-DEDA0B2A0C67</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E4D63837-36B6-467D-B2E9-DEDA0B2A0C67</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KLViewControllerTransitions</string>
+		</dict>
+	</array>
+</dict>
+</plist>
