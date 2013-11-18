@@ -10,7 +10,7 @@
 
 #import "KLBlurredBackgroundCoverTransition.h"
 
-@interface KLBlurDetailController : UIViewController <UIViewControllerTransitioningDelegate>
+@interface KLBlurDetailController : UIViewController <UIViewControllerTransitioningDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, assign) KLTransitionType transitionType;
 @property (weak, nonatomic) IBOutlet UISwitch *animatedSwitch;

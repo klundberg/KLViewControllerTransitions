@@ -22,5 +22,6 @@ typedef NS_ENUM(NSInteger, KLTransitionType) {
     KLTransitionTypeCoverVertical,
     KLTransitionTypeCrossFade,
     KLTransitionTypePageCurl,
-    KLTransitionTypeSpinFromCenter
+    KLTransitionTypeSpinFromCenter,
+    KLTransitionTypeScaleFromCenter
 };

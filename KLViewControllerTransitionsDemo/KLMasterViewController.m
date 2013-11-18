@@ -24,7 +24,8 @@
     [super viewDidLoad];
 
     self.transitionOptions = @[@(KLTransitionTypeCoverVertical),
-                               @(KLTransitionTypeSpinFromCenter)];
+                               @(KLTransitionTypeSpinFromCenter),
+                               @(KLTransitionTypeScaleFromCenter)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -37,12 +38,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 
-        KLTransitionType type = [self.transitionOptions[indexPath.row] integerValue];
-        [segue.destinationViewController setTransitionType:type];
-    }
+    KLTransitionType type = [self.transitionOptions[indexPath.row] integerValue];
+    [segue.destinationViewController setTransitionType:type];
 }
 
 @end

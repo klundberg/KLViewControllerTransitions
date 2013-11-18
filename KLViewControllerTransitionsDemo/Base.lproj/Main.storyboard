@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -51,7 +51,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="cWX-Ya-2Gf"/>
+                                            <segue destination="Ah7-4n-0Wa" kind="push" id="Uxi-zS-J7b"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="2UN-6q-Zc4" style="IBUITableViewCellStyleDefault" id="h0Y-1a-YbZ" userLabel="Spin Cell">
@@ -71,7 +71,27 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="yey-Rm-xMp"/>
+                                            <segue destination="Ah7-4n-0Wa" kind="push" id="ioU-XU-qT1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="mOW-LT-Acm" style="IBUITableViewCellStyleDefault" id="qIM-4F-ILD" userLabel="Scale Cell">
+                                        <rect key="frame" x="0.0" y="152" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qIM-4F-ILD" id="jFS-8q-S60">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Scale from center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mOW-LT-Acm">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ah7-4n-0Wa" kind="push" id="gcw-Zd-Ia2"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -146,7 +166,9 @@
                         <outlet property="animatedSwitch" destination="3S8-J9-L6P" id="Jcj-n8-mYJ"/>
                         <outlet property="styleControl" destination="Ont-xZ-QPV" id="RHI-PZ-a3e"/>
                         <segue destination="2Ud-hH-T28" kind="modal" identifier="modalSegue" id="MCs-od-Mya"/>
-                        <segue destination="jRX-zT-VdB" kind="modal" identifier="modalSequeOpaque" id="adz-Z3-ciN"/>
+                        <segue destination="jRX-zT-VdB" kind="modal" identifier="modalSegueOpaque" id="adz-Z3-ciN"/>
+                        <segue destination="iGo-Z4-rjT" kind="push" identifier="pushSegueOpaque" id="ddQ-29-PNS"/>
+                        <segue destination="zuB-Qo-2aa" kind="push" identifier="pushSegue" id="dac-PA-sm4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
@@ -166,7 +188,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maD-CV-mWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1311" y="64"/>
+            <point key="canvasLocation" x="1325" y="542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k6p-5i-YEH">
@@ -181,7 +203,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlP-rn-Nl5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1311" y="-605"/>
+            <point key="canvasLocation" x="1221" y="-737"/>
         </scene>
         <!--Modal View Controller-->
         <scene sceneID="dgb-ys-0f2">
@@ -265,6 +287,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="yey-Rm-xMp"/>
+        <segue reference="ioU-XU-qT1"/>
+        <segue reference="dac-PA-sm4"/>
+        <segue reference="ddQ-29-PNS"/>
     </inferredMetricsTieBreakers>
 </document>

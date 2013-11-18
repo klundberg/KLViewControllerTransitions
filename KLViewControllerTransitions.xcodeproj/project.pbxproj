@@ -14,6 +14,7 @@
 		79320488180EDC77004D41BD /* KLTransitionContextDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 79320487180EDC77004D41BD /* KLTransitionContextDecorator.m */; };
 		7932048C181566F2004D41BD /* KLBlurredBackgroundTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932048B181566F2004D41BD /* KLBlurredBackgroundTransition.m */; };
 		7932048E181567C6004D41BD /* KLBlurredBackgroundCoverTransitionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932048D181567C6004D41BD /* KLBlurredBackgroundCoverTransitionTest.m */; };
+		798618C91839B201004E6967 /* KLScaleFromCenterTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 798618C81839B201004E6967 /* KLScaleFromCenterTransition.m */; };
 		798FACFC182D23D8002994FF /* KLViewControllerTransitions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 798FACFB182D23AD002994FF /* KLViewControllerTransitions.h */; };
 		798FACFD182D23D8002994FF /* KLTransitionEnums.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79320489180EDE33004D41BD /* KLTransitionEnums.h */; };
 		798FACFE182D23D8002994FF /* KLSpinFromCenterTransition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A61162182BD17D007BAA10 /* KLSpinFromCenterTransition.h */; };
@@ -95,6 +96,8 @@
 		7932048A181566F2004D41BD /* KLBlurredBackgroundTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLBlurredBackgroundTransition.h; sourceTree = "<group>"; };
 		7932048B181566F2004D41BD /* KLBlurredBackgroundTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBlurredBackgroundTransition.m; sourceTree = "<group>"; };
 		7932048D181567C6004D41BD /* KLBlurredBackgroundCoverTransitionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBlurredBackgroundCoverTransitionTest.m; sourceTree = "<group>"; };
+		798618C71839B201004E6967 /* KLScaleFromCenterTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLScaleFromCenterTransition.h; sourceTree = "<group>"; };
+		798618C81839B201004E6967 /* KLScaleFromCenterTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLScaleFromCenterTransition.m; sourceTree = "<group>"; };
 		798FACFB182D23AD002994FF /* KLViewControllerTransitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLViewControllerTransitions.h; sourceTree = "<group>"; };
 		79A5A8A417F4647E00696B55 /* libKLViewControllerTransitions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKLViewControllerTransitions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5A8A717F4647E00696B55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -195,10 +198,20 @@
 		79320485180EDC5D004D41BD /* Animators */ = {
 			isa = PBXGroup;
 			children = (
+				798618C61839B1C6004E6967 /* Scale */,
 				79A61161182BD142007BAA10 /* Spin */,
 				7916EF4717FB94120011C4AF /* Blur */,
 			);
 			name = Animators;
+			sourceTree = "<group>";
+		};
+		798618C61839B1C6004E6967 /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+				798618C71839B201004E6967 /* KLScaleFromCenterTransition.h */,
+				798618C81839B201004E6967 /* KLScaleFromCenterTransition.m */,
+			);
+			name = Scale;
 			sourceTree = "<group>";
 		};
 		79A5A89B17F4647E00696B55 = {
@@ -471,6 +484,7 @@
 			files = (
 				79A5A90717F512AF00696B55 /* UIImage+ImageEffects.m in Sources */,
 				79A5A8AF17F4647E00696B55 /* KLBlurredBackgroundCoverTransition.m in Sources */,
+				798618C91839B201004E6967 /* KLScaleFromCenterTransition.m in Sources */,
 				79F6112C17F5B45C00DDA76B /* UIView+UIImageEffects.m in Sources */,
 				7932048C181566F2004D41BD /* KLBlurredBackgroundTransition.m in Sources */,
 				79A61164182BD17D007BAA10 /* KLSpinFromCenterTransition.m in Sources */,

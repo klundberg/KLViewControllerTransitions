@@ -89,7 +89,7 @@ static NSInteger const BlurredViewTag = 19;
 - (void)adjustNavigationBarForPresentedNavigationController:(UINavigationController *)navController
 {
     // due to a bug in apple's code, the navigation bar of a navigation controller is 44 points tall when animating, and jumps to
-    // be tall enough to encompas the status bar only when the animation finishes. We need to manually set the frame of the navbar here to
+    // be tall enough to encompass the status bar only when the animation finishes. We need to manually set the frame of the navbar here to
     // make it look correct while animating in.
     CGRect frame = navController.navigationBar.frame;
     frame.size.height += [[UIApplication sharedApplication] statusBarFrame].size.height;
